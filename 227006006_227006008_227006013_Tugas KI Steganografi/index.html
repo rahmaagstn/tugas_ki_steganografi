@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganografi App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1> Aplikasi Steganografi</h1>
+    <div id="navbar">
+        <!-- Navigation links -->
+        <a href="#" onclick="showPage('page1')">Penjelasan Materi</a>
+        <a href="#" onclick="showPage('page2')">Cara Menggunakan Aplikasi</a>
+        <a href="#" onclick="showPage('page3')">Steganografi</a>
+    </div>
+    
+    <div class="content">
+        <!-- Page 1: Penjelasan Materi -->
+        <div id="page1">
+            <h2>Penjelasan Materi</h2>
+            <p>Steganografi adalah seni menyembunyikan pesan rahasia dalam media yang biasa atau tidak mencurigakan, seperti teks, audio, atau gambar. Least Significant Bit (LSB) adalah teknik steganografi gambar yang paling umum digunakan.</p>
+            <p> LSB adalah metode steganografi yang memanfaatkan bit paling tidak penting dari setiap byte dalam gambar untuk menyembunyikan data tambahan. Ini dilakukan karena perubahan pada bit-bit ini tidak dapat dilihat oleh mata manusia, sehingga LSB sering digunakan untuk menyembunyikan lebih banyak informasi tanpa mengubah kualitas visual gambar secara signifikan.</p>
+        </div>
+    
+        <!-- Page 2: Cara Menggunakan Aplikasi -->
+        <div id="page2">
+            <h2>Cara Menggunakan Aplikasi</h2>
+            <p>Langkah-langkah cara menggunakan aplikasi sederhana Steganografi:</p>   
+            <p>1. Pilih Gambar: Pada bagian "Content Encode" di halaman "Steganografi", klik tombol "Pilih Gambar" untuk memilih gambar yang akan digunakan untuk menyembunyikan pesan. Pilih gambar yang diinginkan dari file sistem Anda.</p>
+            <p>2. Masukkan Pesan: Setelah memilih gambar, masukkan pesan yang ingin Anda sembunyikan di dalam gambar tersebut ke dalam kotak teks dengan label "Masukkan Pesan".</p>                 
+            <p>3. Sembunyikan Pesan: Setelah memasukkan pesan, klik tombol "Sembunyikan Pesan". Aplikasi akan menyembunyikan pesan dalam gambar yang telah Anda pilih menggunakan teknik steganografi.</p>
+            <p>4. Dekode Pesan: Pada bagian "Content Decode" di halaman "Steganografi", Anda dapat melihat hasil gambar yang telah dimodifikasi dengan pesan tersembunyi. Klik tombol "Dekode Pesan" untuk mengungkapkan pesan yang disembunyikan dari gambar tersebut. </p>        
+            <p>Dengan mengikuti langkah-langkah di atas, Anda dapat menggunakan aplikasi sederhana Steganografi untuk menyembunyikan dan mengungkapkan pesan dalam gambar.</p>
+        </div>
+        <!-- Page 3: Steganografi -->
+        <div id="page3">
+            <h2>Steganografi</h2>
+            <!-- Your steganography app content goes here -->
+            <!-- Include your HTML form and JavaScript code for steganography app -->
+            <form id="steganographyForm">
+                <label for="imageInput">Pilih Gambar:</label>
+                <input type="file" id="imageInput" accept="image/*"><br>
+                <div class="image-container">
+                    <img id="originalImage" src="" alt="Original Image"><br>
+                <label for="messageInput">Masukkan Pesan:</label>
+                <textarea id="messageInput" rows="4" cols="50"></textarea><br>
+                
+                <button type="button" onclick="encodeMessage()">Sembunyikan Pesan</button>
+            </form>
+    
+            <h2>Gambar Hasil Steganografi:</h2>
+            <img id="encodedImage" src="" alt="Encoded Image"><br>
+            <button type="button" onclick="decodeMessage()">Dekode Pesan</button>
+            <p id="decodedMessage"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
